@@ -36,18 +36,43 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Form Tambah Barang</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate aspernatur iste omnis obcaecati! Enim non, deserunt ipsa beatae a velit labore quia, asperiores suscipit maxime, ea optio officiis dignissimos amet!
+        <form action="<?= base_url('admin/data_barang/tambah_aksi') ?>" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label"> Nama Barang </label>
+                    <input type="text" name="nama_brg" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label"> Keterangan </label>
+                    <input type="text" name="keterangan" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label"> Kategori </label>
+                    <input type="text" name="kategori" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label"> Harga </label>
+                    <input type="text" name="harga" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label"> Stok </label>
+                    <input type="text" name="stok" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label"> Gambar Produk </label>
+                    <input type="file" name="gambar" class="form-control">
+                </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Simpan</button>
       </div>
+      </form>
     </div>
   </div>
 </div>
