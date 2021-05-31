@@ -10,12 +10,11 @@
                             $grand_total = $grand_total + $item['subtotal'];
                         };
                         echo "<h4> Total Belanja Anda: Rp. ".number_format($grand_total,0,',','.');
-                    }
                 ?>
             </div><br><br>
             <h3>Input Alamat Pengiriman dan Pembayaran</h3>
 
-            <form action="<?php echo base_url()?> dashboard/proses_pesanan" method="post">
+            <form action="<?php echo base_url()?>dashboard/proses_pesanan" method="post">
                     <div class="form-group">
                         <label>Nama Lengkap</label>
                         <input type="text" name="nama" placeholder="Nama Lengkap Anda" class="form-control">
@@ -29,22 +28,32 @@
                         <input type="text" name="no_tlp" placeholder="Nomor Telepon Anda" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label class="form-control">Jasa Pengiriman</label>
-                        <select name=""> JNE </select>
-                        <select name=""> TIKI </select>
-                        <select name=""> POS INDONESIA </select>
-                        <select name=""> GOJEK </select>
+                        <label>Jasa Pengiriman</label>
+                        <select class="form-control">
+                            <option> JNE </option>
+                            <option> TIKI </option>
+                            <option> POS INDONESIA </option>
+                            <option> GOJEK </option>
+                        </select>
                     </div>
                     <div class="form-group">
-                        <label class="form-control">Pilih Bank</label>
-                        <select name=""> BCA - xxxxx </select>
-                        <select name=""> BNI - xxxx </select>
-                        <select name=""> BRI - xxxxx </select>
-                        <select name=""> Mandiri - xxxx </select>
+                        <label>Pilih Bank</label>
+                        <select class="form-control">
+                            <option> BCA - xxxxx </option>
+                            <option> BNI - xxxx </option>
+                            <option> BRI - xxxxx </option>
+                            <option> Mandiri - xxxx </option>
+                        </select>
                     </div>
-
                     <button type="submit" class="btn btn-sm btn-primary">Pesan</button>
             </form>
+            
+            <?php
+                }else{
+                echo"<h4> Keranjang Belanja Anda Masih Kosong </h4>";
+                }
+            ?>
         </div>
+        <div class="col-md-2"></div>
     </div>
 </div>
