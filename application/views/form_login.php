@@ -32,7 +32,7 @@
                   </form>
                   <hr>
                   <div class="text-center">
-                    <a class="small" href="register.html">Belum punya akun? Daftar!</a>
+                    <a class="small" href="<?php echo base_url('registrasi') ?>">Belum punya akun? Daftar!</a>
                   </div>
                 </div>
               </div>
